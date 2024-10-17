@@ -12,11 +12,14 @@ import Home from "./component/home.jsx";
 //render your react application
 const root = ReactDOM.createRoot(document.getElementById('app'));
 
+
+let startNumber = 1000;
 let counter = 0;
 setInterval(function() {
     //render your react application
-    root.render(<Home counter={counter}/>)
-    counter++;    
+    root.render(<Home startNumber={startNumber} counter={counter}/>)
+    counter++; 
+    startNumber--;   
 }, 1000)
 
 
