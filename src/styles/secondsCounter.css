@@ -17,3 +17,11 @@
     height: 150px;
     padding-bottom: 35px;
 }
+
+.label {
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-bottom: -50px;
+}
