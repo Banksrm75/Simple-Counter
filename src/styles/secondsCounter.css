@@ -1,0 +1,19 @@
+.counter-display{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.counter-display div {
+    display: inline-block;
+    font-size: 150px;
+    background: black;
+    color: white;
+    width: 150px;
+    margin: auto;
+}
+
+.bi-clock {
+    width: 120px;
+    height: 150px;
+    padding-bottom: 35px;
+}
