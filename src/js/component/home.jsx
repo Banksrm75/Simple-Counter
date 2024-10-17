@@ -3,15 +3,14 @@ import calculatePlaceValues from "../../lib/CalcPlaceValues.js"
 import SecondsCounter from "./SecondsCounter.jsx";
 import HundredSecondsAlert from "./HundredSecondsAlert.jsx"
 import Countdown from "./Countdown.jsx";
-
-
-
+import StartStopButtons from "./StartStopButtons.jsx";
 
 
 //create your first component
 const Home = (props) => {
 	return (
 		<>
+			
 			<div className="label">COUNTDOWN TIMER:</div>
 			<Countdown 
 				onesDigit = {calculatePlaceValues(props.startNumber, 1)}
@@ -19,6 +18,7 @@ const Home = (props) => {
 				hundredsDigit = {calculatePlaceValues(props.startNumber, 100)}
 				thousandsDigit = {calculatePlaceValues(props.startNumber, 1000)}
 			/> 
+			
 			<div className="label">STOPWATCH:</div>
 			<HundredSecondsAlert 
 				onesDigit = {calculatePlaceValues(props.counter, 1)}

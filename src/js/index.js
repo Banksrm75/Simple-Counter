@@ -11,16 +11,41 @@ import Home from "./component/home.jsx";
 
 //render your react application
 const root = ReactDOM.createRoot(document.getElementById('app'));
+root.render(<Home startNumber={startNumber} counter={counter}/>)
+
+// const [isRunning, setIsRunning]  = useState(false);
+
+function start(){
+    setIsRunning(true);
+    startTimeRef.current = Date.now() - elapsedTime;
 
 
+}
+
+function stop(){
+    setIsRunning(false);
+}
+
+
+
+
+
+let isRunning = true;
 let startNumber = 1000;
 let counter = 0;
+
+
 setInterval(function() {
     //render your react application
-    root.render(<Home startNumber={startNumber} counter={counter}/>)
-    counter++; 
-    startNumber--;   
+    if (isRunning) {
+        root.render(<Home isRunning={isRunning} startNumber={startNumber} counter={counter}/>)
+        counter++; 
+        startNumber--; 
+    }
+        
 }, 1000)
+
+
 
 
 
