@@ -18,7 +18,7 @@ const Home = (props) => {
 				hundredsDigit = {calculatePlaceValues(props.startNumber, 100)}
 				thousandsDigit = {calculatePlaceValues(props.startNumber, 1000)}
 			/> 
-			
+			<StartStopButtons />
 			<div className="label">STOPWATCH:</div>
 			<HundredSecondsAlert 
 				onesDigit = {calculatePlaceValues(props.counter, 1)}

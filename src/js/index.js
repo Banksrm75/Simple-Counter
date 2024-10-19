@@ -1,20 +1,22 @@
-//import react into the bundle
-import React from "react";
+// React
+import React, {useState} from "react";
 import ReactDOM from "react-dom/client";
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
-
-
-//import your own components
+// Components
 import Home from "./component/home.jsx";
+import StartStopButtons from "./component/StartStopButtons.jsx";
 
-//render your react application
+
+
+//Create root and INITIAL RENDER with buttons
 const root = ReactDOM.createRoot(document.getElementById('app'));
-root.render(<Home startNumber={startNumber} counter={counter}/>)
+// root.render(
+//     <Home startNumber={startNumber} counter={counter}/>,
+//     <StartStopButtons />
+// )
 
-// const [isRunning, setIsRunning]  = useState(false);
 
+//FUNCTIONS
 function start(){
     setIsRunning(true);
     startTimeRef.current = Date.now() - elapsedTime;
@@ -28,19 +30,24 @@ function stop(){
 
 
 
-
-
+// VARIABLES
+// const [isRunning, setIsRunning]  = useState(true);
 let isRunning = true;
 let startNumber = 1000;
 let counter = 0;
 
 
 setInterval(function() {
-    //render your react application
+    //Update variables and Re-render root every second 
     if (isRunning) {
-        root.render(<Home isRunning={isRunning} startNumber={startNumber} counter={counter}/>)
-        counter++; 
-        startNumber--; 
+        root.render(
+            <Home startNumber={startNumber} counter={counter}/>,
+        <StartStopButtons />)
+                counter++; 
+                startNumber--; 
+    }
+    else {
+        
     }
         
 }, 1000)

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import '../../styles/secondsCounter.css'
+import '../../styles/startStopButtons.css'
 import '../index'
 
 function start(){
@@ -18,8 +18,8 @@ function stop(){
 const StartStopButtons = (props) => {
 	return (
         <>
-            <button type="button" onClick={start(props.isRunning)} class="btn btn-success">Start</button>
-            <button type="button" onClick={stop(props.isRunning)} class="btn btn-danger">Stop</button>
+            <button type="button" onClick={() => {setIsRunning(true)}} className="btn btn-success">Start</button>
+            <button type="button" onClick={() => {setIsRunning(false)}} className="btn btn-danger">Stop</button>
         </>
         
     );

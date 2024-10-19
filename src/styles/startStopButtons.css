@@ -1,0 +1,9 @@
+.btn {
+    width: 8em;
+    height: 4em;
+    margin: 20px;
+}
+
+.btn-success {
+    margin-left: 40%;
+}
