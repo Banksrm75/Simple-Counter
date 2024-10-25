@@ -3,18 +3,6 @@ import PropTypes from "prop-types";
 import '../../styles/startStopButtons.css'
 import '../index'
 
-function start(){
-    setIsRunning(true);
-
-
-}
-
-function stop(){
-    setIsRunning(false);
-}
-
-
-
 const StartStopButtons = (props) => {
 	return (
         <>
